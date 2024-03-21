@@ -30,11 +30,10 @@ export default function CreateTask() {
 		if (response?.error) {
 			toast.error(response.error);
 		}
+		const buttonElement = document.getElementById("closeCreateDialog");
+		if (buttonElement) buttonElement.click();
 		toast.success("Succesfully Added New Task!");
 		ref.current?.reset();
-		const buttonElement = document.getElementById("closeDialog");
-
-		if (buttonElement) buttonElement.click();
 	};
 
 	const openModal = () => {
@@ -67,7 +66,7 @@ export default function CreateTask() {
 				<div className="modal-box flex flex-col content-center">
 					<form method="dialog">
 						<button
-							id="closeDialog"
+							id="closeCreateDialog"
 							className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
 						>
 							✕

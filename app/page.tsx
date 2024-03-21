@@ -1,4 +1,4 @@
-import Tasks from "./ui/tasks/Task";
+import Tasks from "./ui/tasks/Tasks";
 
 export default function Home() {
 	return (
